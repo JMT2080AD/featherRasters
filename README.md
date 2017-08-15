@@ -17,7 +17,7 @@ rast1 <- x[[1]]
 rast2 <- x[[2]]
 featherDist <- 50
 frast1 <- featherRasters(rast1, rast2, featherDist)
-plot(frast[[3]], col = rainbow(255))
+plot(frast1[[3]], col = rainbow(255))
 
 ## edges need work
 ## need to feather only line segments where raster extents intersect.
@@ -26,5 +26,5 @@ rast1 <- x[[1]]
 rast2 <- x[[2]]
 featherDist <- 50
 frast2 <- featherRasters(rast1, rast2, featherDist)
-plot(frast[[3]], col = rainbow(255))
+plot(frast2[[3]], col = rainbow(255))
 ```
