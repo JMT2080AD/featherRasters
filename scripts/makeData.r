@@ -19,17 +19,17 @@ makeData <- function(res, plotRast = F, seed = 1){
 
     largeRast <- raster(largeSurface)
 
-    dataS <- data.frame(x = runif(100, res * 0.51, res * 0.75),
-                        y = runif(100, res * 0.51, res * 0.75),
+    dataS <- data.frame(x = runif(100, res * 0.3, res * 0.75),
+                        y = runif(100, res * 0.3, res * 0.75),
                         data = seq(0.1, 10, 0.1))
 
     smallSurface <- interp(dataS$x,
                            dataS$y,
                            dataS$data,
-                           nx = res * 0.25,
-                           ny = res * 0.25,
-                           xo = c((res * 0.51):(res * 0.75)),
-                           yo = c((res * 0.51):(res * 0.75)),
+                           nx = res * 0.5,
+                           ny = res * 0.5,
+                           xo = c((res * 0.3):(res * 0.75)),
+                           yo = c((res * 0.3):(res * 0.75)),
                            linear = T)
 
     smallRast <- raster(smallSurface)
