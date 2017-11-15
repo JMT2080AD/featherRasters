@@ -10,12 +10,12 @@ featherDist <- 30
 frast1 <- featherRasters(rast1, rast2, featherDist)
 
 ## unfeathered
-png("./images/centered_unfeathered.jpg")
+png("./images/centered_unfeathered.png")
 plot(merge(rast1, rast2), col = rainbow(255))
 dev.off()
 
 ## feathered
-png("./images/centered_feathered.jpg")
+png("./images/centered_feathered.png")
 plot(frast1, col = rainbow(255))
 dev.off()
 
