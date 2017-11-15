@@ -9,13 +9,10 @@ rast2 <- x[[2]]
 featherDist <- 30
 frast1 <- featherRasters(rast1, rast2, featherDist)
 
-## unfeathered
-png("./images/centered_unfeathered.png")
+## plots
+png("./images/centered.png", width = 960)
+par(mfrow = c(1,2))
 plot(merge(rast1, rast2), col = rainbow(255), main = "Unfeathered")
-dev.off()
-
-## feathered
-png("./images/centered_feathered.png")
 plot(frast1, col = rainbow(255), main = "Feathered")
 dev.off()
 
@@ -28,13 +25,10 @@ rast2 <- x[[2]]
 featherDist <- 10
 frast2 <- featherRasters(rast1, rast2, featherDist)
 
-## unfeathered
-png("./images/edge_unfeathered.png")
+## plots
+png("./images/edge.png", width = 960)
+par(mfrow = c(1,2))
 plot(merge(rast1, rast2), col = rainbow(255), main = "Unfeathered")
-dev.off()
-
-## feathered
-png("./images/edge_feathered.png")
-plot(frast2, col = rainbow(255), main = "Feathered")
+plot(frast1, col = rainbow(255), main = "Feathered")
 dev.off()
 
