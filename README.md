@@ -8,11 +8,9 @@ This function works best when the first raster is completely inside the second. 
 View `test.r` to see usage for `featherRasters()`. It will produce the following graphics:
 
 ![raster centered unfeathered](./images/centered_unfeathered.png)
-
 ![raster centered feathered](./images/centered_feathered.png)
 
 ![raster edge unfeathered](./images/edge_unfeathered.png)
-
 ![raster edge feathered](./images/edge_feathered.png)
   
 Here it can be seen that rastered that have overlapping, where one is not enclosed inside the other have odd efects and the function needs work.

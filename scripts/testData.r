@@ -11,12 +11,12 @@ frast1 <- featherRasters(rast1, rast2, featherDist)
 
 ## unfeathered
 png("./images/centered_unfeathered.png")
-plot(merge(rast1, rast2), col = rainbow(255))
+plot(merge(rast1, rast2), col = rainbow(255), main = "Unfeathered")
 dev.off()
 
 ## feathered
 png("./images/centered_feathered.png")
-plot(frast1, col = rainbow(255))
+plot(frast1, col = rainbow(255), main = "Feathered")
 dev.off()
 
 ## feathering where rasters only partially overlap.
@@ -30,11 +30,11 @@ frast2 <- featherRasters(rast1, rast2, featherDist)
 
 ## unfeathered
 png("./images/edge_unfeathered.png")
-plot(merge(rast1, rast2), col = rainbow(255))
+plot(merge(rast1, rast2), col = rainbow(255), main = "Unfeathered")
 dev.off()
 
 ## feathered
 png("./images/edge_feathered.png")
-plot(frast2, col = rainbow(255))
+plot(frast2, col = rainbow(255), main = "Feathered")
 dev.off()
 
