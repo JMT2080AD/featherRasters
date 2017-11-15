@@ -29,6 +29,6 @@ frast2 <- featherRasters(rast1, rast2, featherDist)
 png("./images/edge.png", width = 960)
 par(mfrow = c(1,2))
 plot(merge(rast1, rast2), col = rainbow(255), main = "Unfeathered")
-plot(frast1, col = rainbow(255), main = "Feathered")
+plot(frast2, col = rainbow(255), main = "Feathered")
 dev.off()
 
