@@ -6,15 +6,18 @@ source("./scripts/featherRasters.r")
 x <- makeData(res = 500, seed = 5)
 rast1 <- x[[1]]
 rast2 <- x[[2]]
-featherDist <- 100
+featherDist <- 30
 frast1 <- featherRasters(rast1, rast2, featherDist)
 
 ## unfeathered
-plot(rast2, col = rainbow(225))
-plot(rast1, col = rainbow(225), add = T)
+png("./images/centered_unfeathered.jpg")
+plot(merge(rast1, rast2), col = rainbow(255))
+dev.off()
 
 ## feathered
+png("./images/centered_feathered.jpg")
 plot(frast1, col = rainbow(255))
+dev.off()
 
 ## feathering where rasters only partially overlap.
 ## this needs work
@@ -22,13 +25,16 @@ plot(frast1, col = rainbow(255))
 x <- makeData2(res = 500, seed = 5)
 rast1 <- x[[1]]
 rast2 <- x[[2]]
-featherDist <- 50
+featherDist <- 10
 frast2 <- featherRasters(rast1, rast2, featherDist)
 
 ## unfeathered
-plot(rast2, col = rainbow(225))
-plot(rast1, col = rainbow(225), add = T)
+png("./images/edge_unfeathered.png")
+plot(merge(rast1, rast2), col = rainbow(255))
+dev.off()
 
 ## feathered
+png("./images/edge_feathered.png")
 plot(frast2, col = rainbow(255))
+dev.off()
 

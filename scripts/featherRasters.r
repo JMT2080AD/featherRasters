@@ -139,10 +139,9 @@ featherRasters <- function(rast1, rast2, featherDist){
     rast2   <- resample(rast2, rastNew)
 
     ## add blended rasters
-    rast1[is.na(rast1)] <- 0
-    rast2[is.na(rast2)] <- 0
-
-    rastNew <- rast1 + rast2
-
-    return(rastNew)
+    rast0 <- merge(rast1, rast2)
+    rast0[!is.na(rast0)] <- 0 
+    rast1 <- merge(rast1, rast0)
+    rast2 <- merge(rast2, rast0)
+    return(rast1 + rast2)
 }
