@@ -13,6 +13,6 @@ View `test.r` to see usage for `featherRasters()`. It will produce the following
 ![raster edge unfeathered](./images/edge_unfeathered.png)
 ![raster edge feathered](./images/edge_feathered.png)
   
-Here it can be seen that rastered that have overlapping, where one is not enclosed inside the other have odd efects and the function needs work.
+Here it can be seen that rasters that are overlapping, where one is not completely enclosed inside the other, have odd effects and the function needs work.
 
-Also, this function is quite slow and would benefit from better memory managment, or at least one will need to subset there data to only the merge area, then add back to thier original raster, when using in production.
+Also, this function is quite slow and would benefit from better memory management. If performance becomes an issue one will need to subset their data to only the merge area, then add back to their original raster, otherwise, this tool may be take too long to run to be useful.
